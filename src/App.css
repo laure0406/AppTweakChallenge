@@ -1,0 +1,474 @@
+/* App.css */
+.App { /*Style de la page*/
+  text-align: center;
+  color: #000000;
+}
+.App-header { /*style du header*/
+  color: #f0bcbc;
+  font-family: 'Times New Roman', Times, serif;
+  font: bold;
+  font-size: 50px;
+  background: linear-gradient(to right,rgb(252, 245, 222), rgb(255, 235, 138), rgb(252, 245, 222)); /*dégradé de couleur*/
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  height:100px;
+}
+
+.table-header {
+  height: 100px;
+}
+
+.table-header td:nth-child(1){
+  font-size: 30px;
+  width:800px;
+  height: 20px;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+.table-header td:nth-child(2){
+  text-align: left;
+  width:300px;
+}
+.table-header td:nth-child(3){
+width:10000px;
+margin-right: 50000px;
+}
+.table-header td:nth-child(4){
+  text-align: center;
+  font-size: 30px;
+  width:1100px;
+
+}
+
+/*Style du profil*/
+#profile-image-container { /*Profil*/
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #d1819a;
+  border: 10px;
+}
+
+#profile-image-container img { /*Image de profil*/
+  margin-top: 24px;
+  border: 2px solid #d1819a;
+  height: 48px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#profile-image-container p {/*espace entre les lignes dans info profil*/
+  margin-bottom: 5px; 
+}
+
+#profile-image-container.active { /*zone d'affichage des infos profil*/
+  margin-top: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#profile-image-container .user-info { /*zone d'affichage des infos profil*/
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: rgb(253, 249, 235);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Style playlist*/
+select { /*sélection de la playlist*/
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  margin-left: 215px; /*décalage pour pas être collé au bord*/
+  font-size: 16px;
+  border: 2px solid #eec5c5;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+}
+
+#playlist{/*style de la division*/
+  text-align: left; /*on aligne à gauche car par défaut c'est au milieu*/
+}
+.table{ /*Tableau dans lequel sont mis tous les titress*/
+  margin-top: 50px;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.table th { /*en tête du tableau table*/
+  font-size: 16px;
+  background-color: #eec5c5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.release-date-column{ /*pour agrandir la colonne Date de sortie*/
+  width: 180px;
+}
+
+.table tr:nth-child(even) { /*sur les lignes paires*/
+  background-color: rgb(253, 249, 235);
+}
+.table tr:nth-child(odd) { /*sur les lignes iimpaires*/
+  background-color: #ffffff;
+}
+
+.track-name{ /*style des noms de chansons*/
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight:bold;
+}
+
+.artist-name { /*style des noms d'artistes*/
+  font-size: 13px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.track td:nth-child(1) { /*sous tableau dans le titre*/
+  width: 150px;
+  text-align: center;
+}
+.track td:nth-child(2) {
+  width: 350px;
+}
+
+.track img{  /*style des images dans la playlist*/
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+/*Search style*/
+#search{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#search input[type="text"] {
+  display: flex;
+  margin-left: 230px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 250px;
+  height: 20px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 2px solid #eec5c5;
+}
+.search-results-table {
+  position: absolute;
+  z-index: 1; /*premier plan*/
+  border-collapse: collapse;
+  width: 360px;
+  margin-left: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.album-image-cell img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-results-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.search-results-table th {
+  background-color: #eec5c5;
+  padding: 6px;
+}
+.search-results-table th:nth-child(odd) { /*sur les entetes impaires*/
+  border-top-left-radius: 10px;
+}
+.search-results-table th:nth-child(even) { /*sur les entetes paires*/
+  border-top-right-radius: 10px;
+}
+
+.search-results-table tr:nth-child(even) { /*sur les lignes paires*/
+  background-color: rgb(253, 249, 235);
+}
+
+.search-results-table tr:nth-child(odd) { /*sur les lignes iimpaires*/
+  background-color: #ffffff;
+}
+
+.search-results-table tr:nth-child(odd):hover { /*Quand on passe dessus*/
+  background-color: #eaf6fd;
+}
+.search-results-table tr:nth-child(even):hover { /*Quand on passe dessus*/
+  background-color: #d0eeff;
+}
+
+
+/*Choix tri*/
+.sort{
+  text-align: center;
+  
+}
+.table-sort{ /*style tableau de choix du tri*/
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 680px;
+  text-align: center;
+  border-collapse: collapse;
+  height: 30px;
+}
+
+.table-sort td:nth-child(2), /*style des colonnes 2 3 et 4*/
+.table-sort td:nth-child(3),
+.table-sort td:nth-child(4) {
+  width: 150px;
+  background-color: rgb(253, 249, 235);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.table-sort td:nth-child(1) { /*style de la colonne 1*/
+  width: 210px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #eec5c5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight:bolder;
+}
+.table-sort td:nth-child(4) { /*bordure dernière colonne */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.table-sort td:nth-child(2):hover,
+.table-sort td:nth-child(3):hover,
+.table-sort td:nth-child(4):hover { /*Quand on passe dessus*/
+  background-color: #d0eeff;
+}
+
+/*Dark Mode*/
+body {
+  background-color: #fff6f6;
+  color: #333333;
+}
+
+.switch {
+  position:relative;
+  text-align: right;
+  display: inline-block; /*forme du switch*/
+  width: 60px;
+  height: 34px;
+}
+.table-logo{
+  text-align: center;
+  margin-top: -20px; /*pour centrer les icones*/
+}
+.moon{
+
+  font-size: 30px;
+  color: #f0bcbc;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.sun{
+  font-size: 30px;
+  color: #f0bcbc;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ec7a7a;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before { /*rond du switch*/
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s; /*vitesse de transition du bouton*/
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+input:checked + .slider {
+  background-color: #262b2e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /*translate selon x de 26*/
+}
+
+.slider.round {
+  border-radius: 60px; 
+
+}
+
+.slider.round:before {
+  border-radius: 50%; /**/
+}
+
+/*DARK MODE*/
+/*body*/
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #111111;
+}
+
+/*header*/
+.dark-mode .App-header{
+  background: linear-gradient(to right,rgb(144, 175, 219), rgb(129, 141, 179), rgb(144, 175, 219));
+  color: #b05d5d;
+}
+
+/*recherche chanson*/
+.dark-mode .search-results-table tr:nth-child(even) { /*sur les lignes paires*/
+  background-color: rgb(144, 175, 219);
+}
+.dark-mode .search-results-table tr:nth-child(odd) { /*sur les lignes iimpaires*/
+  color:#fff;
+  background-color: #000000;
+}
+.dark-mode .search-results-table tr:nth-child(odd):hover { /*Quand on passe dessus*/
+  color:#000;
+  background-color: #eaf6fd;
+}
+.dark-mode .search-results-table tr:nth-child(even):hover { /*Quand on passe dessus*/
+  background-color: #d0eeff;
+}
+
+.dark-mode .search-results-table th { /*Quand on passe dessus*/
+  background-color: #b05d5d;
+}
+
+
+/*tableau tri*/
+.dark-mode .table-sort td:nth-child(2), /*style des colonnes 2 3 et 4*/
+.dark-mode .table-sort td:nth-child(3),
+.dark-mode .table-sort td:nth-child(4) {
+  width: 150px;
+  background-color:rgb(144, 175, 219);
+  cursor: pointer;
+  font-weight: bold;
+  color:#ffff;
+}
+.dark-mode .table-sort td:nth-child(1) { /*style de la colonne 1*/
+  color: #000000;
+  background-color: #b05d5d;
+}
+.dark-mode .table-sort td:nth-child(4):hover,
+.dark-mode .table-sort td:nth-child(3):hover,
+.dark-mode .table-sort td:nth-child(2):hover { /*Quand on passe dessus*/
+  color:#000;
+  background-color: #ffffff;
+}
+
+
+/*tableau playlist*/
+.dark-mode .table th:nth-child(3),
+.dark-mode .table th:nth-child(2),
+.dark-mode .table th:nth-child(1) { /*style de la colonne 1*/
+  color: #ffffff;
+  background-color: #b05d5d;
+}
+
+.dark-mode .table tr:nth-child(even){
+  background-color:rgb(144, 175, 219);
+  color:#fff;
+}
+.dark-mode .table tr:nth-child(odd){
+  background-color:rgb(216, 216, 216);
+  color:#000000;
+}
+
+.dark-mode .artist-name { /*style des noms d'artistes*/
+  font-size: 13px;
+  color: #878787;
+  margin-top: 5px;
+}
+
+
+/*Profil*/
+.dark-mode #profile-image-container { 
+  color: #b05d5d; 
+}
+
+.dark-mode #profile-image-container img { /*Image de profil*/
+  margin-top: 24px;
+  border: 2px solid #b05d5d;
+  height: 48px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dark-mode #profile-image-container.active { /*zone d'affichage des infos profil*/
+  margin-top: 50px;
+  background-color: rgb(201, 201, 201);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.dark-mode #profile-image-container .user-info { /*zone d'affichage des infos profil*/
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: rgb(144, 175, 219);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #search input[type="text"] {
+  display: flex;
+  margin-left: 230px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 250px;
+  height: 20px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 2px solid #b05d5d;
+}
+.dark-mode select { /*sélection de la playlist*/
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  margin-left: 215px; /*décalage pour pas être collé au bord*/
+  font-size: 16px;
+  border: 2px solid #b05d5d;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+}
+
+
+
